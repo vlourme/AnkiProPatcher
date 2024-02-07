@@ -1,0 +1,29 @@
+--- output/instruction.hasm	2024-02-07 10:25:53
++++ instruction.hasm	2024-02-07 10:32:54
+@@ -1046864,7 +1046864,9 @@
+ 
+ 	GetEnvironment      	Reg8:0, UInt8:0
+ 	LoadFromEnvironment 	Reg8:7, Reg8:0, UInt8:13
+-	LoadFromEnvironment 	Reg8:6, Reg8:0, UInt8:12
++	
++	LoadConstUInt8			Reg8:6, UInt8:1
++
+ 	LoadFromEnvironment 	Reg8:5, Reg8:0, UInt8:2
+ 	LoadFromEnvironment 	Reg8:4, Reg8:0, UInt8:19
+ 	LoadFromEnvironment 	Reg8:3, Reg8:0, UInt8:20
+@@ -1048179,15 +1048181,7 @@
+ EndFunction
+ 
+ Function<useIsUserPremium>21192(1 params, 11 registers, 0 symbols):
+-	GetEnvironment      	Reg8:0, UInt8:0
+-	LoadFromEnvironment 	Reg8:0, Reg8:0, UInt8:1
+-	GetById             	Reg8:2, Reg8:0, UInt8:1, UInt16:27576
+-	; Oper[3]: String(27576) 'useAppSelector'
+-
+-	LoadConstUndefined  	Reg8:1
+-	CreateEnvironment   	Reg8:0
+-	CreateClosure       	Reg8:0, Reg8:0, UInt16:21193
+-	Call2               	Reg8:0, Reg8:2, Reg8:1, Reg8:0
++	LoadConstUInt8			Reg8:0 UInt8:1
+ 	Ret                 	Reg8:0
+ EndFunction
